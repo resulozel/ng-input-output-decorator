@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-5">
+
+
+
+    <div class="card w-75" style="width: 18rem;" *ngFor="let data of datas">
+      <div class="card-body bg-gradient"  >
+        <div class="row"  >
+          <div class="col-md-3" >
+            <h5 class="card-title"> {{data.frameworkName}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted"> {{data.headerName}} </h6>
+            <p class="card-text">
+              {{data.description}}
+            </p>
+          </div>
+          <div class="col-md-9 d-flex justify-content-end">
+            <img src="/assets/images/angular.png" alt="angular">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <app-clap [clapCount]="clap" (changeClap)="clickClap()"></app-clap>
+
+    </div>
+
+
+  </div>
+</div>
+
+
